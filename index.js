@@ -26,15 +26,16 @@ const selectCell = function(eventData){
 
 }
 
-const randomNumber = Math.floor(Math.random() * 76);
-const generateField = document.getElementById("number-generator-btn")
-const GenerateNewNumber = function(){
-    let generateNode = generateField
-    return randomNumber
+const randomNumber = function(){
+    let generateField = document.getElementById("number-generator-btn")
+    let randomNumber = Math.floor(Math.random() * 76);
+    let pressGenerateBTN = document.getElementById("number-changer").innerText = randomNumber
+    generateField.onclick = pressGenerateBTN
+
 }
-const changeH3 = function(){
-    let h3Change = document.generateField.innerText = GenerateNewNumber
-}
+
+
+
 
 window.onload = function(){
     displayNumber()
